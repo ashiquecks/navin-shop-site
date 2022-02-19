@@ -299,4 +299,4 @@ const CustomOutfitGirls = () => {
   
 }
 
-export default Feed;
+export default CustomOutfitGirls;
