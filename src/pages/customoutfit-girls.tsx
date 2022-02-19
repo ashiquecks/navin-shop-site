@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import DodItem from "src/item/items";
+// import DodItem from "src/item/items";
 import  Grid  from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import { Wrapper } from "src/item/item.styles";
