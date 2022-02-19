@@ -1,6 +1,6 @@
 import Navbar from "@components/layout/navbar/navbar";
 import React,{ useState } from "react";
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import { CartProvider, useCart } from "react-use-cart";
 
 const Test  = (props) => {
