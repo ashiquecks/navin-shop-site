@@ -1,1 +1,0 @@
-INSERT INTO `shipping_classes` VALUES (1,'Global',50,'1','fixed','2021-03-25 13:27:49','2021-03-25 13:27:49');
