@@ -91,7 +91,7 @@ const NavbarWithSearch = () => {
           <div className="headerstyles">
             <Logo />
           </div>
-            {/* <p className="text-head">hihello</p> */}
+            {/* <p className="text-head">loading</p> */}
             {/* <ProductTypeMenu className="ms-10 me-auto hidden xl:block" /> */}
             <div className="headerstylings">
               <ul className="  hidden lg:flex items-center flex-shrink-10 space-s-9">

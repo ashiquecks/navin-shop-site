@@ -52,7 +52,7 @@ const productdescription = () => {
   <div>
     <div className="container grid grid-cols-4 gap-2 mx-auto ">
     <div className=" rounded">
-    <p>hi hello</p>
+    <p>loading</p>
 
       <Image
             className="w-full"
@@ -65,7 +65,7 @@ const productdescription = () => {
     <div className="w-full rounded">
 
     {/* <Card className="w-full rounded mt-5"> */}
-    <p>hi hello</p> 
+    <p>loading</p> 
 
       <Image
             className="w-full"
@@ -78,7 +78,7 @@ const productdescription = () => {
     </div>
     <div className="w-full rounded">
     {/* <Card className="w-full rounded mt-5">  */}
-   <p>hi hello</p> 
+   <p>loading</p> 
 
      <Image
             className="w-full"
@@ -91,7 +91,7 @@ const productdescription = () => {
      </div>
     <div className="w-full rounded">
     {/* <Card className="w-full rounded mt-5">  */}
-     <p>hi hello</p> 
+     <p>loading</p> 
 
      <Image
             className="w-full"
@@ -104,7 +104,7 @@ const productdescription = () => {
     </div>
     <div className="w-full rounded">
     {/* <Card className="w-full rounded mt-5"> */}
- <p>hi hello</p> 
+ <p>loading</p> 
 
        <Image
             className="w-full"

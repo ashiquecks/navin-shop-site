@@ -68,19 +68,23 @@ const CustomOutfit = () => {
       <Navbar />
       <Wrapper>
       {gender=='boys' && 
-        <Card>
-          <div style={{cursor: "pointer"}} onClick={() => showProds('main-dress-boys')}>
-          <img class="dodImg" src="main-dress-boys.png" />
-          Main Dressdd</div>
-          <div style={{cursor: "pointer"}} onClick={() => showProds('caps-boys')}>
-          <img class="dodImg" src="caps-boys.png" />
-          Caps for Boys</div>
-          <div style={{cursor: "pointer"}} onClick={() => showProds('socks-boys')}>
-          <img class="dodImg" src="socks-boys.png" />
-          Socks/Booties for Boys</div>
-          <div style={{cursor: "pointer"}} onClick={() => showProds('gloves-boys')}>
-          <img class="dodImg" src="gloves-boys.png" />
-          Gloves for Boys</div>
+        <Card className="dodMenu boys sidenav">
+          <div onClick={() => showProds('main-dress-boys')}>
+          <img src="main-dress-boys.png" />
+          <b>Main Dress</b>
+          </div>
+          <div onClick={() => showProds('caps-boys')}>
+          <img src="caps-boys.png" />
+          <b>Caps for Boys</b>
+          </div>
+          <div onClick={() => showProds('socks-boys')}>
+          <img src="socks-boys.png" />
+          <b>Socks / Booties for Boys</b>
+          </div>
+          <div onClick={() => showProds('gloves-boys')}>
+          <img src="gloves-boys.png" />
+          <b>Gloves for Boys</b>
+          </div>
         </Card>}
         {gender=='girls' && 
         <Card>

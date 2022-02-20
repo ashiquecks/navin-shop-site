@@ -30,8 +30,16 @@
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
   }
-  .dodImg{
-display: block;
+  .dodMenu b{
+    display:block;
+    font-weight: normal;
+    text-align: center;
+    font-size:80%;
+  }
+  .dodMenu img{
+  display: block;
+  width: 100%;
+  height:auto;
   }
 
   #dod-cart{
