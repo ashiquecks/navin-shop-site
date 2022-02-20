@@ -80,3 +80,5 @@ function App() {
     </CartProvider>
   );
 }
+
+export default Cart;

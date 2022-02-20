@@ -1,56 +1,10 @@
-import dynamic from "next/dynamic";
-import { useRouter } from "next/router";
-import { motion } from "framer-motion";
-import Button from "@components/ui/button";
 import Navbar from "@components/layout/navbar/navbar";
-import ErrorMessage from "@components/ui/error-message";
-import renderProductCard from "@components/product/render-product-card";
-import NotFound from "@components/common/not-found";
-import { useProductsQuery } from "@data/product/use-products.query";
-import { Fragment } from "react";
-import { useTranslation } from "next-i18next";
 import Footer from "@components/common/footer";
-import Image from 'next/image';
-import Card from "@components/ui/card";
 import MobileNavigation from "../components/layout/mobile-navigation";
 
 
-const ProductFeedLoader = dynamic(
-  () => import("@components/ui/loaders/product-feed-loader")
-);
-
-const SideBar = dynamic(
-  () => import("@components/ui/sidebar-menu")
-);
-
-const Feed = () => {
-  const { t } = useTranslation("common");
-  const { query } = useRouter();
-  const {
-    isFetching: loading,
-    isFetchingNextPage: loadingMore,
-    fetchNextPage,
-    hasNextPage,
-    isError,
-    data,
-    error,
-  } = useProductsQuery({
-    type: query.type as string,
-    text: query?.text as string,
-    category: query?.category as string,
-  });
-
-  if (isError && error) return <ErrorMessage message={error.message} />;
-  function handleLoadMore() {
-    fetchNextPage();
-  }
-  if (!loading && !data?.pages?.[0]?.data?.length) {
-    return (
-      <div className="bg-gray-100 min-h-full pt-6 pb-8 px-4 lg:p-8">
-        <NotFound text="text-not-found" className="w-7/12 mx-auto" />
-      </div>
-    );
-  }
+const About = () => {
+  
   return (
     <>
      <Navbar />
@@ -74,7 +28,6 @@ const Feed = () => {
 
             <img
               src="/logo1.png"
-              alt={t("nav-menu-contact")}
               className="w-full h-auto "
             />
             
@@ -92,22 +45,14 @@ const Feed = () => {
 
                     <p className="py-4">Quality products in quickest time is our priority. Our manufacturing unit in Kochi, is adept at processing orders in a very short time. What ever the occasion, we are bound to have the perfect fit outfit and accessories to serve you to make your child’s event a memorable one.</p>
 
-            </section>
-           
-          
-      
-   
-          
+            </section> 
         </div>
       </div>
     </div>
     <MobileNavigation />
-    <Footer />
-
-    
-        
+    <Footer />    
     </>
   );
 };
 
-export default Feed;
+export default About;

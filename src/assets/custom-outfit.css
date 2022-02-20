@@ -1,6 +1,6 @@
 .sidenav {
     height: 100%;
-    width: 160px;
+    width: 140px;
     position: fixed;
     z-index: 1;
     /* top: 0; */
@@ -26,9 +26,12 @@
   }
   
   .main {
-    margin-left: 160px; /* Same as the width of the sidenav */
+    margin-left: 140px; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
+  }
+  .dodImg{
+display: block;
   }
 
   #dod-cart{
@@ -45,9 +48,6 @@
     background-color: grey;
     object-fit:cover;
     border-radius:50%;
-  }
-  #btn-dod2cart{
-
   }
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}

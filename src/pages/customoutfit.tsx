@@ -12,45 +12,9 @@ import { useCart } from "@contexts/quick-cart/cart.context";
 import { CoreApi, ParamsType } from "@utils/api/core.api";
 import { API_ENDPOINTS } from "@utils/api/endpoints";
 
-// export type CartItemType ={
-//     id: number;
-//     category: string;
-//     description: string;
-//     image: string;
-//     price: number;
-//     title: string;
-//     amount: string;
-//     // sizes: string;
-//     slug: string;
-//   }
-  
-// const getProducts = [
-//     {
-//       id: 0,
-//       category: "clothes",
-//       description: "littile kingdom girls",
-//       image: "/babygirl.jpg",
-//       price: 51,
-//       title: "baby girls dress",
-//       amount: "123",
-//       slug: "magnetic-designs-women-printed-fit-and-flare-dress"
-      
-//     },
-//     {
-//       id: 1,
-//       category: "clothes",
-//       description: "littile kingdom boys",
-//       image: "/bap.png",
-//       price: 85,
-//       title: "baby boy dresss",
-//       amount: "123",
-//       slug: "mango-self-striped-a-line-dress"
-//     }
-//   ]
-
 const ProductService = new CoreApi(API_ENDPOINTS.PRODUCTS);
 
-const Feed = () => {
+const CustomOutfit = () => {
 
   const [gender,setGender]=useState('boys');
   useEffect(()=>{
@@ -61,7 +25,6 @@ const Feed = () => {
 
   const [dataProds,setProds] = useState([]);
   const [activeSection,setActive] = useState('main-dress-boys');
-  const [addToDodStatus,setAddDodStatus] = useState(true);
 
   const showProds = async (section:string) => {
 
@@ -91,11 +54,7 @@ const Feed = () => {
   };
 
   const {
-    addItemToCart,
-    removeItemFromCart,
-    isInStock,
-    getItemFromCart,
-    isInCart,
+    addItemToCart
   } = useCart();
 
   const handleDod2Cart = () => {
@@ -104,44 +63,28 @@ const Feed = () => {
     } );
   }
 
-
-
-  // const handleRemovefromCart = (id: number) =>{
-  //   setCartItems(prev => (
-  //     prev.reduce((ack,item) =>{
-  //       if(item.id === id) {
-  //         if(item.amount === 1) return ack;
-  //         return [...ack,{...item,amount:item.amount - 1}];
-  //       }
-  //       else{
-  //         return [...ack,item]
-  //       }
-  //     }, [] as CartItemType[])
-  //   ))
-  // };
-
-  // if(dodCart?.dodItems?.length!<=0)
-  //   setAddDodStatus(true);
-  // else
-  //   setAddDodStatus(false);
-
   return(
     <div>
       <Navbar />
       <Wrapper>
       {gender=='boys' && 
         <Card>
-          <div style={{cursor: "pointer"}} onClick={() => showProds('main-dress-boys')}>Main Dress</div>
-          <div style={{cursor: "pointer"}} onClick={() => showProds('caps-boys')}>Caps for Boys</div>
-          <div style={{cursor: "pointer"}} onClick={() => showProds('socks-boys')}>Socks/Booties for Boys</div>
-          <div style={{cursor: "pointer"}} onClick={() => showProds('gloves-boys')}>Gloves for Boys</div>
+          <div style={{cursor: "pointer"}} onClick={() => showProds('main-dress-boys')}>
+          <img class="dodImg" src="main-dress-boys.png" />
+          Main Dressdd</div>
+          <div style={{cursor: "pointer"}} onClick={() => showProds('caps-boys')}>
+          <img class="dodImg" src="caps-boys.png" />
+          Caps for Boys</div>
+          <div style={{cursor: "pointer"}} onClick={() => showProds('socks-boys')}>
+          <img class="dodImg" src="socks-boys.png" />
+          Socks/Booties for Boys</div>
+          <div style={{cursor: "pointer"}} onClick={() => showProds('gloves-boys')}>
+          <img class="dodImg" src="gloves-boys.png" />
+          Gloves for Boys</div>
         </Card>}
         {gender=='girls' && 
         <Card>
-          <div style={{cursor: "pointer"}} onClick={() => showProds('main-dress-boys')}>Main Dress</div>
-          <div style={{cursor: "pointer"}} onClick={() => showProds('caps-boys')}>Caps for Girls</div>
-          <div style={{cursor: "pointer"}} onClick={() => showProds('socks-boys')}>Socks/Booties for Grirls</div>
-          <div style={{cursor: "pointer"}} onClick={() => showProds('gloves-boys')}>Gloves for Grirls</div>
+         ssd
         </Card>}
         <Grid container spacing={3}>
           {dataProds?.map((item:any) => (
@@ -171,4 +114,4 @@ const Feed = () => {
   
 }
 
-export default Feed;
+export default CustomOutfit;

@@ -1,5 +1,3 @@
-
-//import { CartItemType } from 'src/pages/customoutfit';
 import { ItemWrapper} from 'src/item/item.styles';
 
 type props = {

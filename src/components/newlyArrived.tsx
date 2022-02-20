@@ -3,8 +3,6 @@ import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useTranslation } from "next-i18next";
 import "swiper/swiper-bundle.css";
-import { useState } from "react";
-// dummy data
 
 
 const data = [
@@ -70,7 +68,7 @@ const SliderBreakpoints = {
 };
 SwiperCore.use([Navigation]);
 
-export default function NewFeatureProducts() {
+const NewFeatureProducts = () => {
 
   const { t } = useTranslation();
   return (
@@ -124,3 +122,4 @@ export default function NewFeatureProducts() {
    </div>
   );
 }
+export default NewFeatureProducts;
